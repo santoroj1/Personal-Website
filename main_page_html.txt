@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>[Myself]</title>
+        <link rel="stylesheet" href="custom_css.css">
+        
+        <!-- Add Relevant Meta Info Here -->
+    </head>
+    <body>
+        <header>
+            <nav>
+                <span>
+                    <a href="#" class="nav_link">Link 1</a>
+                    <a href="#" class="nav_link">Link 2</a>
+                    <a href="#" class="nav_link">Link 3</a>
+                </span>
+            </nav>
+            
+            <div id="main_header">
+                <h1>This is the main page.</h1>
+                <p>custom_css.css is used to style ths page.</p>
+            </div>
+        </header>
+        <section>
+            <header>
+                <h2>Code Samples</h2>
+            </header>
+            <ul>
+                <li><a href="csharp_page.html">C#</a></li>
+                <li><a href="java_page.html">Java</a></li>
+                <li><a href="cpp_page.html">C++</a></li>
+                <li><a href="c_page.html">C</a></li>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">Javascript</a></li>
+                <li><a href="#">CSS</a></li>
+            </ul>
+        </section>
+        <footer>
+            <p>Written by:  John Santoro</p>
+        </footer>
+    </body>
+</html>

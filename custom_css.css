@@ -1,17 +1,33 @@
 html
 {
     background: linear-gradient(0deg, #DDDDDD 0%, #EEEEEE 2%, #FFFFFF 8%, #FFFFFF 92%, #EEEEEE 98%, #DDDDDD 100%);
+    padding: 0px 0px;
 }
 
 a
 {
-    /*ba*/
+    color: blue;
+}
+
+a:visited
+{
+    color: purple;
 }
 
 header, body, section, footer, #main_header, nav, article
 {
     padding: 5px 20px;
     margin: 10px;
+}
+
+section
+{
+    border-bottom: 4px solid #EEEEEE;
+    border-bottom-style: ridge;
+    border-top: 4px solid #EEEEEE;
+    border-top-style: groove;
+    box-shadow: 0px 0px 5px rgb(192, 192, 224);
+    background: white;
 }
 
 h1, h2, h3, .p_footer
@@ -33,8 +49,13 @@ nav, #main_header
 {
     background: #DDDDDD;
     border: 2px solid gray;
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px rgb(128, 128, 128);
+}
+
+nav
+{
+    padding: 20px;
 }
 
 iframe
@@ -59,7 +80,16 @@ img
 
 .nav_link
 {
-    padding: 0px 100px 0px 0px
+    margin: 0px 10px 0px 0px;
+    padding: 6px 12px;
+    background: rgb(180, 180, 180);
+    border: 1px #808080 solid;
+    border-radius: 2px;
+}
+
+.nav_link:hover
+{
+    background: rgb(192, 224, 255);
 }
 
 /* Custom IDs */

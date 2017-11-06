@@ -1,0 +1,40 @@
+#dummy_page, .dummy_page_hf, #dummy_page_body
+{
+    border: 2px solid black;
+    border-radius: 10px;
+    background: rgb(225, 240, 255);
+}
+
+#dummy_page
+{
+    margin: 10px 40px;
+}
+
+.dummy_page_hf
+{
+    background: rgb(190, 240, 190);
+}
+
+#p_subhead
+{
+    text-align: center;
+    font-style: oblique;
+    font-size: 11px;
+}
+
+#dummy_page_body
+{
+    background: rgb(240, 240, 170)
+}
+
+#quote
+{
+    padding-left: 25px;
+    font-size: 90%;
+    font-style: italic;
+}
+
+.dummy_page_list
+{
+    padding: 14px 0px;
+}

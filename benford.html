@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+    
+   
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Benford</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- Scripts -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        
+        <!-- Google Charts API Example -->
+        <script src="higher-hw.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        
+        <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+            
+        function change()
+            {
+                
+            var listbox = document.getElementById("chart");
+            var selIndex = listbox.selectedIndex;
+            var selValue = listbox.options[selIndex].value;
+            var selText = listbox.options[selIndex].text;
+                
+            google.charts.setOnLoadCallback(drawMultSeries);
+
+            function drawMultSeries() {
+                  var data_Sunspots = google.visualization.arrayToDataTable([
+                    ['Digit', 'Percentage in Data', 'Model Benford Distribution'],
+                    ['1', sunspotsMap.get(1), 30.1],
+                    ['2', sunspotsMap.get(2), 17.1],
+                    ['3', sunspotsMap.get(3), 12.5],
+                    ['4', sunspotsMap.get(4), 9.7],
+                    ['5', sunspotsMap.get(5), 7.9],
+                    ['6', sunspotsMap.get(6), 6.7],
+                    ['7', sunspotsMap.get(7), 5.8],
+                    ['8', sunspotsMap.get(8), 5.1],
+                    ['9', sunspotsMap.get(9), 4.6],
+                  ]);
+
+                var data_LiveJournals = google.visualization.arrayToDataTable([
+                    ['Digit', 'Percentage in Data', 'Model Benford Distribution'],
+                    ['1', liveJournalMap.get(1), 30.1],
+                    ['2', liveJournalMap.get(2), 17.1],
+                    ['3', liveJournalMap.get(3), 12.5],
+                    ['4', liveJournalMap.get(4), 9.7],
+                    ['5', liveJournalMap.get(5), 7.9],
+                    ['6', liveJournalMap.get(6), 6.7],
+                    ['7', liveJournalMap.get(7), 5.8],
+                    ['8', liveJournalMap.get(8), 5.1],
+                    ['9', liveJournalMap.get(9), 4.6],
+                  ]);
+
+                var data_LibraryBooks = google.visualization.arrayToDataTable([
+                    ['Digit', 'Percentage in Data', 'Model Benford Distribution'],
+                    ['1', librarybooksMap.get(1), 30.1],
+                    ['2', librarybooksMap.get(2), 17.1],
+                    ['3', librarybooksMap.get(3), 12.5],
+                    ['4', librarybooksMap.get(4), 9.7],
+                    ['5', librarybooksMap.get(5), 7.9],
+                    ['6', librarybooksMap.get(6), 6.7],
+                    ['7', librarybooksMap.get(7), 5.8],
+                    ['8', librarybooksMap.get(8), 5.1],
+                    ['9', librarybooksMap.get(9), 4.6],
+                  ]);
+
+                // console.log([...help]);
+
+                  var options = {
+                    // title: 'Population of Largest U.S. Cities',
+                    chartArea: {width: '50%'},
+                    hAxis: {
+                      title: 'First Digit',
+                      minValue: 0
+                    },
+                    vAxis: {
+                      title: 'Percentage'
+                    }
+                  };
+
+                  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+                
+                var x = data_Sunspots;
+                
+                if (selValue == 'data_LiveJournals')
+                    x = data_LiveJournals;
+                else if (selValue == 'data_LibraryBooks')
+                    x = data_LibraryBooks;
+                
+                  chart.draw(x, options);
+                }
+            }
+        </script>
+    </head>
+    <body>
+       <header>
+           <h1>Benford Distribution Chart</h1>
+       </header>
+       
+        <!-- <th> -->
+        <select id="chart" name='select1' onchange="change()">
+            <option selected disabled>Choose</option> 
+            <option value="data_Sunspots">Sunspots</option>
+            <option value="data_LiveJournals">Live Journals</option>
+            <option value="data_LibraryBooks">Library Books</option>
+        </select>
+        <!-- </th> -->
+       
+        <div id="chart_div" style="width:400; height:300"></div>
+    </body>
+</html>
