@@ -1,0 +1,65 @@
+html
+{
+    background: linear-gradient(0deg, #DDDDDD 0%, #EEEEEE 2%, #FFFFFF 8%, #FFFFFF 92%, #EEEEEE 98%, #DDDDDD 100%);
+}
+
+a
+{
+    /*ba*/
+}
+
+header, body, section, footer, #main_header, nav, article
+{
+    padding: 5px 20px;
+    margin: 10px;
+}
+
+h1, h2, h3, .p_footer
+{
+    text-align: center;
+}
+
+h2
+{
+    color: #404040;
+}
+
+h3
+{
+    color: #606060;
+}
+
+nav, #main_header
+{
+    background: #DDDDDD;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+iframe
+{
+    width: 100%;
+    min-height: 500px;
+}
+
+img
+{
+    border: 3px solid rgb(224, 224, 224);
+}
+
+/* Custom Classes */
+.code_container
+{
+    padding: 5px;
+    border: 2px #D0D0D0 solid;
+    background: rgb(240, 240, 240);
+    color: #707070;
+}
+
+.nav_link
+{
+    padding: 0px 100px 0px 0px
+}
+
+/* Custom IDs */
